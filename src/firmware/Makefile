@@ -41,3 +41,6 @@ CLEAN_FILES+= bin/main*
 
 clean:
 	rm $(CLEAN_FILES) -rf
+
+burn: $(ELF)
+	avrdude -c arduino -p atmega328p -P /dev/ttyUSB0 -U flash:w:bin/main.hex
