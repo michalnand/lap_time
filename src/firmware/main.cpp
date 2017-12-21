@@ -33,17 +33,17 @@ class CMeassureTask: public CTaskInterface
     {
       laser.process();
 
- 
+      /*
       if (laser.result.event)
       {
         terminal << "object detected at " << timer.get_time() << " " << laser.result.bias_value << " " << laser.result.filtered_value << "\n";
       }
+      */
 
-      /*
       if ((cnt%10) == 0)
         terminal << "distance " << laser.result.distance << "\n";
       cnt++;
-      */
+
     }
 };
 
